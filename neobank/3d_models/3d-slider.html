@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>3D слайдер</title>
+  <link rel="stylesheet" href="/neobank/style.css">
+  <link rel="stylesheet" href="/neobank/3d_models/3d-slider.css">
+</head>
+<body>
+<main class="container">
+  <div class="breadcrumbs">
+    <a href="/neobank/index.php">Главная</a> /
+    <a href="/neobank/3d_models/index.php">3D</a> / 4
+  </div>
+  <h2 class="page-title">3D-слайдер криптовалют</h2>
+
+  <div class="slider-stage">
+    <div class="slider" id="slider">
+      <div class="slide"><div class="icon"></div><div class="name">Bitcoin</div><div class="price">$67,320</div></div>
+      <div class="slide"><div class="icon"></div><div class="name">Ethereum</div><div class="price">$3,540</div></div>
+      <div class="slide"><div class="icon"></div><div class="name">Tether</div><div class="price">$1.00</div></div>
+      <div class="slide"><div class="icon"></div><div class="name">BNB</div><div class="price">$590</div></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="prev()">Назад</button>
+    <button onclick="next()">Вперёд</button>
+  </div>
+</main>
+
+<script>
+  var angle = 0;
+  var slider = document.getElementById('slider');
+
+  function update() { slider.style.transform = 'rotateY(' + angle + 'deg)'; }
+  function next() { angle -= 90; update(); }
+  function prev() { angle += 90; update(); }
+
+  setInterval(next, 3000);
+</script>
+</body>
+</html>

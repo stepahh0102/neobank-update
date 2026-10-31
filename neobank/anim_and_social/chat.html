@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Чат</title>
+  <link rel="stylesheet" href="/neobank/style.css">
+  <link rel="stylesheet" href="/neobank/anim_and_social/chat.css">
+</head>
+<body>
+<main class="container">
+  <div class="breadcrumbs">
+    <a href="/neobank/index.php">Главная</a> /
+    <a href="/neobank/anim_and_social/index.php">Соцсеть</a> / 3
+  </div>
+  <h2 class="page-title">Чат NeoBank</h2>
+
+  <div class="chat-wrapper">
+    <div class="chat">
+      <div class="chat-header">Чат участников</div>
+
+      <div class="chat-body" id="chatBody">
+        <div class="msg in">Привет!</div>
+        <div class="msg out">Привет, как дела?</div>
+        <div class="msg in">Всё отлично!</div>
+      </div>
+
+      <div class="chat-input">
+        <input type="text" id="msgInput" placeholder="Сообщение...">
+        <button onclick="sendMsg()">➤</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  function sendMsg() {
+    var input = document.getElementById('msgInput');
+    var text = input.value;
+    if (!text) return;
+
+    var body = document.getElementById('chatBody');
+    var div = document.createElement('div');
+    div.className = 'msg out';
+    div.innerHTML = text;
+
+    body.appendChild(div);
+    input.value = '';
+  }
+
+  document.getElementById('msgInput').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') sendMsg();
+  });
+</script>
+</body>
+</html>

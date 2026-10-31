@@ -1,0 +1,31 @@
+.table-demo {
+  background: #161b22;
+  border-radius: 12px;
+  padding: 30px;
+  border: 1px solid #30363d;
+}
+.table-demo table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table-demo th, .table-demo td {
+  border: 1px solid #30363d;
+  padding: 12px;
+  text-align: left;
+}
+.table-demo th {
+  background: #1f6feb;
+  color: #fff;
+}
+.amount-in  { color: #3fb950; }
+.amount-out { color: #f85149; }
+.export-btn {
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: #1f6feb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}

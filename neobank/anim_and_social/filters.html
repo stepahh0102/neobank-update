@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>NeoBank — Настройки ленты</title>
+  <link rel="stylesheet" href="/neobank/style.css">
+  <link rel="stylesheet" href="/neobank/anim_and_social/filters.css">
+</head>
+<body>
+
+<header class="site-header">
+  <h1><a href="/neobank/index.php"><span class="logo-mark">N</span>NeoBank</a></h1>
+  <div class="header-tagline">Банк · Соцсеть · Крипто · Инвестиции</div>
+</header>
+
+<nav class="site-nav">
+  <ul>
+    <li><a href="/neobank/index.php">Главная</a></li>
+    <li><a href="/neobank/website/index.php">Сайт</a></li>
+    <li><a href="/neobank/payments/index.php">Оплата</a></li>
+    <li><a href="/neobank/PHP_forms/index.php">Регистрация</a></li>
+    <li><a href="/neobank/cabinet/index.php">Кабинет</a></li>
+    <li><a href="/neobank/analytics/index.php">Аналитика</a></li>
+    <li><a href="/neobank/3d_models/index.php">3D</a></li>
+    <li><a href="/neobank/table_excel/index.php">Экспорт</a></li>
+    <li><a href="/neobank/anim_and_social/index.php" class="active">Соцсеть</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+
+  <div class="breadcrumbs" style="margin-top:20px;">
+    <a href="/neobank/index.php">Главная</a> /
+    <a href="/neobank/anim_and_social/index.php">Соцсеть</a> / Настройки
+  </div>
+
+  <h2 class="page-title">Настройки ленты</h2>
+  <p class="page-desc">Управляйте тем, какие посты и уведомления вы хотите видеть</p>
+
+  <div class="settings-layout">
+    
+    <div class="settings-sidebar">
+      <div class="settings-nav-item active">Лента</div>
+      <div class="settings-nav-item">Уведомления</div>
+      <div class="settings-nav-item">Приватность</div>
+      <div class="settings-nav-item">Безопасность</div>
+    </div>
+
+    <div class="settings-content">
+      
+      <div class="settings-group">
+        <h3 class="settings-group-title">Что показывать в ленте</h3>
+        
+        <label class="settings-row">
+          <div class="settings-info">
+            <div class="settings-name">Посты друзей</div>
+            <div class="settings-desc">Показывать записи ваших контактов</div>
+          </div>
+          <div class="custom-checkbox">
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+          </div>
+        </label>
+
+        <label class="settings-row">
+          <div class="settings-info">
+            <div class="settings-name">Новости криптовалют</div>
+            <div class="settings-desc">Рыночная аналитика и графики</div>
+          </div>
+          <div class="custom-checkbox">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </div>
+        </label>
+      </div>
+
+      <div class="settings-group">
+        <h3 class="settings-group-title">Push-уведомления</h3>
+        
+        <label class="settings-row">
+          <div class="settings-info">
+            <div class="settings-name">Уведомления о транзакциях</div>
+            <div class="settings-desc">Мгновенные оповещения о списаниях и поступлениях</div>
+          </div>
+          <div class="custom-switch">
+            <input type="checkbox" checked>
+            <span class="switch-slider"></span>
+          </div>
+        </label>
+
+        <label class="settings-row">
+          <div class="settings-info">
+          <div class="settings-name">Изменение курсов валют</div>
+          <div class="settings-desc">Оповещения о резких скачках криптовалют</div>
+        </div>
+        <div class="custom-switch">
+            <input type="checkbox">
+               <span class="switch-slider"></span>
+        </div>
+        </label>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+</body>
+</html>

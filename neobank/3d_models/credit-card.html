@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>3D карта</title>
+  <link rel="stylesheet" href="/neobank/style.css">
+  <link rel="stylesheet" href="/neobank/3d_models/credit-card.css">
+</head>
+<body>
+<main class="container">
+  <div class="breadcrumbs">
+    <a href="/neobank/index.php">Главная</a> /
+    <a href="/neobank/3d_models/index.php">3D</a> / 2
+  </div>
+  <h2 class="page-title">3D-карта NeoBank</h2>
+
+  <div class="card-container" onclick="this.classList.toggle('flipped')">
+    <div class="card">
+      <div class="card-face">
+        <div class="chip"></div>
+        <div class="card-number">4276 1234 5678 9010</div>
+        <div class="card-bottom">
+          <div>OSIPOV STEPAN</div>
+          <div>12/29</div>
+        </div>
+      </div>
+      <div class="card-face card-back">
+        <div class="stripe"></div>
+        <div class="cvv-box">CVV 842</div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

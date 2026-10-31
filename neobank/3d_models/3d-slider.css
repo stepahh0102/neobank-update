@@ -1,0 +1,49 @@
+.slider-stage {
+  perspective: 1200px;
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 12px;
+}
+.slide .icon { font-size: 60px; }
+.slide .name { font-size: 24px; }
+.slide .price { font-size: 18px; }
+
+.slide:nth-child(1) { background: #f7931a; transform: rotateY(  0deg) translateZ(200px); }
+.slide:nth-child(2) { background: #627eea; transform: rotateY( 90deg) translateZ(200px); }
+.slide:nth-child(3) { background: #26a17b; transform: rotateY(180deg) translateZ(200px); }
+.slide:nth-child(4) { background: #f3ba2f; transform: rotateY(270deg) translateZ(200px); }
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 40px;
+}
+.controls button {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: #1f6feb;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}

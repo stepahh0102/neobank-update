@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Транзакции</title>
+  <link rel="stylesheet" href="/neobank/style.css">
+  <link rel="stylesheet" href="/neobank/table_excel/transactions.css">
+</head>
+<body>
+<main class="container">
+  <div class="breadcrumbs">
+    <a href="/neobank/index.php">Главная</a> /
+    <a href="/neobank/table_excel/index.php">Экспорт</a> / 1
+  </div>
+  <h2 class="page-title">История транзакций</h2>
+
+  <div class="table-demo">
+    <table id="dataTable">
+      <thead>
+        <tr><th>№</th><th>Дата</th><th>Операция</th><th>Сумма</th><th>Валюта</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>2026-10-01</td><td>Перевод в США</td><td class="amount-out">-1,500.00</td><td>USD</td></tr>
+        <tr><td>2</td><td>2026-10-02</td><td>Покупка BTC</td><td class="amount-out">-500.00</td><td>USDT</td></tr>
+        <tr><td>3</td><td>2026-10-03</td><td>Зарплата</td><td class="amount-in">+120,000.00</td><td>RUB</td></tr>
+        <tr><td>4</td><td>2026-10-05</td><td>Обмен EUR → USD</td><td class="amount-in">+2,180.00</td><td>USD</td></tr>
+        <tr><td>5</td><td>2026-10-07</td><td>Дивиденды ETF</td><td class="amount-in">+85.40</td><td>USD</td></tr>
+        <tr><td>6</td><td>2026-10-09</td><td>Подписка Premium</td><td class="amount-out">-9.99</td><td>USD</td></tr>
+      </tbody>
+    </table>
+
+    <button class="export-btn" onclick="exportTable()">Выгрузить в Excel</button>
+  </div>
+</main>
+
+<script>
+  function exportTable() {
+    var table = document.getElementById('dataTable');
+    var html = table.outerHTML;
+    var uri = 'data:application/vnd.ms-excel;charset=utf-8,' +
+              '<html><head><meta charset="UTF-8"></head><body>' + html + '</body></html>';
+    var link = document.createElement('a');
+    link.href = uri;
+    link.download = 'NeoBank_transactions.xls';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+</script>
+</body>
+</html>
